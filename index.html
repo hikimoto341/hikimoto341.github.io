@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/zemi.css">    
+</head>
+<body>
+    <div class="text-box">    
+        <form id="quiz-form">        
+            <input type="text" id="answer"name="answer"placeholder="答えを入力してください"/>
+            <p><button type="submit">送信</button></p>
+            <p id="result"></p>        
+        </form>
+    </div>
+
+    //ポップアップ表示
+    <div id="modal"class="modal">
+        <div class="modal-content">
+            <span id="close"class="close">&times;</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function() {
+            const form=document.getElementById("quiz-form");
+            const input=document.getElementById("answer");
+            const result=document.getElementById("result");
+
+
+            //答えの登録
+            const correctAnswer="正解";
+
+            form.addEventListener("submit",function(event) {
+                event.preventDefault();
+            
+
+                const userInput = input.value.trim();
+
+                //正誤判定
+                if (userInput === correctAnswer) {
+                    result.textContent="正解です";
+                    result.style.color="red";
+                    
+                } else {
+                    result.textContent="不正解です";
+                    result.style.color="blue";
+                }   
+            });
+        });
+
+    </script>
+</body>
+</html>
