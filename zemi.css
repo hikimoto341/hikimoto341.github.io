@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+
+/*テキストボックスのデザイン*/
+input{
+    width:250px;                                        /*幅*/
+    height:20px;                                        /*高さ*/
+    padding:10px;
+    font-family:'Courier New', Courier, monospace;      /*フォントの種類*/
+    font-size:13px;
+    text-align:center;                                  /*中央ぞろえ*/
+    border-radius:12px;                                 /*テキストボックスの角を丸くする*/
+    outline-color:#000                                /*外枠*/
+}
+
+/*ボタンのデザイン*/
+button{
+   width:75px;      
+   height:45px;     
+   background-color:#c299ff;    
+   color:#000;                  
+   border:0.8px solid #000;     
+   border-radius:50px;                                          /*ボタンの形を楕円形にする*/
+   font-size:16px;
+   outline-color: #000;
+   font-family: 'Courier New', Courier, monospace;              
+   cursor:pointer;                                              /*カーソルが合った時*/
+   transition:background-color 0.3 ease,border-color 0.3s ease;
+}
+
+/*ボタンをクリックすると色が変わる*/
+button:hover{
+    background-color:#9057ff;
+}
+
+/*背景のデザイン*/
+.mainvisual{
+    background-color:#a6a2a2;
+}
+
+img{
+    width:45px;
+    height:60px;
+    margin-right:0;
+}
+img{
+    width:50px;
+    height: 5pxpx;
+    margin-right:0;
+}
+
+.result{
+    font-family:'Courier New', Courier, monospace;
+    font-size:50px;
+}
